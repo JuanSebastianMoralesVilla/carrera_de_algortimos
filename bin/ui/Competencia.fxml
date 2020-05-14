@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="754.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.CompetitionGUI">
+   <children>
+      <TextField fx:id="txtNum" layoutX="135.0" layoutY="35.0" prefHeight="25.0" prefWidth="80.0" />
+      <Label layoutX="94.0" layoutY="16.0" text="N:" textAlignment="JUSTIFY">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="rdAdd" layoutX="63.0" layoutY="157.0" mnemonicParsing="false" text="ADD">
+         <toggleGroup>
+            <ToggleGroup fx:id="GruopA" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rdDelete" layoutX="63.0" layoutY="192.0" mnemonicParsing="false" text="DELETE" toggleGroup="$GruopA" />
+      <RadioButton fx:id="rdSearch" layoutX="63.0" layoutY="223.0" mnemonicParsing="false" text="SEARCH" toggleGroup="$GruopA" />
+      <RadioButton layoutX="198.0" layoutY="192.0" mnemonicParsing="false" text="ITERATIVE">
+         <toggleGroup>
+            <ToggleGroup fx:id="GruopMode" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="195.0" layoutY="221.0" mnemonicParsing="false" text="RECURSIVE" toggleGroup="$GruopMode" />
+      <Button layoutX="135.0" layoutY="310.0" mnemonicParsing="false" onAction="#startRace" prefHeight="41.0" prefWidth="99.0" text="RUN" />
+      <TextField fx:id="txtArrayList" editable="false" layoutX="350.0" layoutY="353.0" prefHeight="25.0" prefWidth="64.0" />
+      <TextField fx:id="txtLinkedList" editable="false" layoutX="478.0" layoutY="353.0" prefHeight="25.0" prefWidth="64.0" />
+      <TextField fx:id="txtBynariTree" editable="false" layoutX="599.0" layoutY="349.0" prefHeight="25.0" prefWidth="64.0" />
+      <Separator layoutY="109.0" prefHeight="17.0" prefWidth="304.0" />
+      <Separator layoutX="172.0" layoutY="114.0" orientation="VERTICAL" prefHeight="149.0" prefWidth="4.0" />
+      <Separator layoutX="3.0" layoutY="265.0" prefHeight="3.0" prefWidth="304.0" />
+      <Label layoutX="218.0" layoutY="126.0" text="MODE" />
+      <Label layoutX="41.0" layoutY="126.0" text="ALGORITM" />
+      <ImageView fitHeight="62.0" fitWidth="64.0" layoutX="600.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../IMGlAB/tree.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="62.0" fitWidth="64.0" layoutX="479.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../IMGlAB/survey.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="62.0" fitWidth="64.0" layoutX="351.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../IMGlAB/system.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="34.0" layoutX="29.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../IMGlAB/plus.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="34.0" layoutX="29.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../IMGlAB/delete.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="34.0" layoutX="29.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../IMGlAB/loupe.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="106.0" layoutX="50.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../IMGlAB/cross.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="307.0" layoutY="6.0" orientation="VERTICAL" prefHeight="394.0" prefWidth="6.0" />
+      <ImageView fitHeight="41.0" fitWidth="46.0" layoutX="215.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../IMGlAB/agile.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="62.0" fitWidth="74.0" layoutX="42.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../IMGlAB/start.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="53.0" fitWidth="58.0" layoutX="335.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../IMGlAB/clock%20(1).png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtCronometre" editable="false" layoutX="417.0" layoutY="55.0" />
+      <Label layoutX="469.0" layoutY="27.0" text="TIMEKEEPER" textAlignment="CENTER" />
+      <ProgressBar fx:id="pbArrayList" layoutX="414.0" layoutY="135.0" prefWidth="200.0" progress="0.0" />
+      <ProgressBar fx:id="pbLinkedList" layoutX="414.0" layoutY="180.0" prefWidth="200.0" progress="0.0" />
+      <ProgressBar fx:id="pbBinaryTree" layoutX="414.0" layoutY="216.0" prefWidth="200.0" progress="0.0" />
+      <TextField fx:id="txtProgressArrayList" editable="false" layoutX="644.0" layoutY="132.0" prefHeight="25.0" prefWidth="60.0" />
+      <TextField fx:id="txtProgressLinkedList" editable="false" layoutX="644.0" layoutY="176.0" prefHeight="25.0" prefWidth="60.0" />
+      <TextField fx:id="txtProgressBst" editable="false" layoutX="644.0" layoutY="213.0" prefHeight="25.0" prefWidth="60.0" />
+      <Label layoutX="329.0" layoutY="135.0" prefHeight="18.0" prefWidth="64.0" text="ArrayList:" textAlignment="CENTER" />
+      <Label layoutX="329.0" layoutY="180.0" prefHeight="18.0" prefWidth="64.0" text="LinkedList:" textAlignment="CENTER" />
+      <Label layoutX="329.0" layoutY="216.0" prefHeight="18.0" prefWidth="89.0" text="Bs tree:" textAlignment="CENTER" />
+      <Circle fx:id="bigCircle" fill="DODGERBLUE" layoutX="676.0" layoutY="62.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="smallCircle" fill="#2b4054" layoutX="676.0" layoutY="62.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+   </children>
+</Pane>
